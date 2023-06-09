@@ -4,67 +4,96 @@
     <meta charset="UTF-8"/>
     <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Vite App</title>
+    <title>:: MTN-radio-btns-clone ::</title>
     <script type="module" src="./src/main.js" defer></script>
 </head>
 <body>
 
 <div class="mx-auto p-4 gap-y-4 flex-col flex w-[628px]">
+
+    <!--    DATA PLAN TYPE-->
     <div class="flex flex-col rounded-md bg-gray-200 p-4 gap-y-4 w-full">
-        <h2 class="text-gray-800 font-light text-xl">Pick how many months you want the plan for.</h2>
-        <ul class="flex gap-x-4 tab-link--container">
+        <h2 class="text-gray-800 font-light text-xl">Pick The Data Plan Type</h2>
+        <ul class="flex gap-x-4">
             <li>
-                <a id="tab1" href="#"
-                   class="bg-gray-800 hover:bg-gray-800 hover:text-white flex items-center justify-center py-2 px-4 text-white font-light rounded-md p-2 w-64 h-10	border border-gray-400 text-sm"
-                   onclick="openTab('tab1','content1')">24</a>
+                <a id="data-plan-tab1" href="#"
+                   class="data-plan-type--tab bg-gray-800 hover:bg-gray-800 hover:text-white flex items-center justify-center py-2 px-4 text-white font-light rounded-md p-2  h-10	border border-gray-400 text-sm"
+                   onclick="openTab('data-plan-type-tab1','data-plan-type-content1','data-plan-type-tab-content', 'data-plan-type--tab')">Data
+                    Only</a>
             </li>
             <li>
-                <a id="tab2" href="#"
-                   class="bg-transparent hover:bg-gray-800 hover:text-white flex items-center justify-center py-2 px-4 text-gray-800 font-light rounded-md p-2 w-64 h-10 border border-gray-400"
-                   onclick="openTab('tab2','content2')">36</a>
+                <a id="data-plan-type-tab2" href="#"
+                   class="data-plan-type--tab bg-transparent hover:bg-gray-800 hover:text-white flex items-center justify-center py-2 px-4 text-gray-800 font-light rounded-md p-2  h-10 border border-gray-400"
+                   onclick="openTab('data-plan-type-tab2','data-plan-type-content2','data-plan-type-tab-content', 'data-plan-type--tab')">Voice
+                    & Data</a>
+            </li>
+
+            <li>
+                <a id="data-plan-type-tab3" href="#"
+                   class="data-plan-type--tab bg-transparent hover:bg-gray-800 hover:text-white flex items-center justify-center py-2 px-4 text-gray-800 font-light rounded-md p-2  h-10 border border-gray-400"
+                   onclick="openTab('data-plan-type-tab3','data-plan-type-content3','data-plan-type-tab-content', 'data-plan-type--tab')">Flexi</a>
             </li>
         </ul>
     </div>
-    <div id="content1" class="tab-content flex flex-col w-full rounded-md bg-gray-200 p-2">
-        <div class="flex p-4">
-            <h2 class="text-gray-800 font-light text-xl">Which option works for you?</h2>
-            <button class="text-gray-800 font-normal flex gap-x-4 items-center ml-auto">
-                <span class="text-sm font-semibold">Sort By: Low to High</span>
-            </button>
+    <div id="data-plan-type-content1"
+         class="data-plan-type-tab-content flex flex-col w-full rounded-md bg-gray-200 p-2">
+
+        <!--MONTHS YOU WANT THE PLAN FOR-->
+        <div class="flex flex-col rounded-md bg-gray-200 p-4 gap-y-4 w-full">
+            <h2 class="text-gray-800 font-light text-xl">Pick how many months you want the plan for.</h2>
+            <ul class="flex gap-x-4">
+                <li>
+                    <a id="months-tab1" href="#"
+                       class="months-plan--tab bg-gray-800 hover:bg-gray-800 hover:text-white flex items-center justify-center py-2 px-4 text-white font-light rounded-md p-2 w-64 h-10	border border-gray-400 text-sm"
+                       onclick="openTab('months-tab1','months-content1', 'months-tab-content', 'months-plan--tab')">24</a>
+                </li>
+                <li>
+                    <a id="months-tab2" href="#"
+                       class="months-plan--tab bg-transparent hover:bg-gray-800 hover:text-white flex items-center justify-center py-2 px-4 text-gray-800 font-light rounded-md p-2 w-64 h-10 border border-gray-400"
+                       onclick="openTab('months-tab2','months-content2', 'months-tab-content', 'months-plan--tab')">36</a>
+                </li>
+            </ul>
         </div>
-        <ul class="flex flex-col gap-y-2 divide-y divide-gray-300">
-            <li class="flex option-item cursor-pointer w-full group flex-col">
-                <div class="flex flex-col text-gray-800 hover:text-white rounded-md hover:bg-gray-800 py-3 px-4 grow option-container">
-                    <span class="text-sm">MEGA GIGS XS</span>
-                    <div class="flex grow justify-between gap-x-4">
-                        <div class="flex flex-col gap-y-2 w-40">
-                            <span class="font-bold text-2xl">2 GB</span>
-                            <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
-                                <li>
+        <div id="months-content1" class="months-tab-content flex flex-col w-full rounded-md bg-gray-200 p-2">
+            <div class="flex p-4">
+                <h2 class="text-gray-800 font-light text-xl">Which option works for you?</h2>
+                <button class="text-gray-800 font-normal flex gap-x-4 items-center ml-auto">
+                    <span class="text-sm font-semibold">Sort By: Low to High</span>
+                </button>
+            </div>
+            <ul class="flex flex-col gap-y-2 divide-y divide-gray-300">
+                <li class="flex option-item cursor-pointer w-full group flex-col">
+                    <div class="flex flex-col text-gray-800 hover:text-white rounded-md hover:bg-gray-800 py-3 px-4 grow option-container">
+                        <span class="text-sm">MEGA GIGS XS</span>
+                        <div class="flex grow justify-between gap-x-4">
+                            <div class="flex flex-col gap-y-2 w-40">
+                                <span class="font-bold text-2xl">2 GB</span>
+                                <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
+                                    <li>
                                     <span class="font-semibold">1 <span
                                             class="font-normal">GB Anytime Data</span></span>
-                                </li>
-                                <li>
+                                    </li>
+                                    <li>
                                     <span class="font-semibold">500 <span
                                             class="font-normal">MB Social Data</span></span>
-                                </li>
-                                <li>
+                                    </li>
+                                    <li>
                                     <span class="font-semibold">500 <span
                                             class="font-normal">MB Video Streaming Data</span></span>
-                                </li>
-                            </ul>
-                        </div>
+                                    </li>
+                                </ul>
+                            </div>
 
-                        <div class="flex flex-col gap-y-2">
-                            <span class="font-bold text-2xl">2 MIN</span>
-                            <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
-                                <li>
-                                    <span class="font-semibold">25 <span class="font-normal">All-Net</span></span>
-                                </li>
-                            </ul>
-                        </div>
+                            <div class="flex flex-col gap-y-2">
+                                <span class="font-bold text-2xl">2 MIN</span>
+                                <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
+                                    <li>
+                                        <span class="font-semibold">25 <span class="font-normal">All-Net</span></span>
+                                    </li>
+                                </ul>
+                            </div>
 
-                        <div class="flex flex-col gap-y-2 ">
+                            <div class="flex flex-col gap-y-2 ">
                     <span class="font-bold text-3xl flex gap-x-1">
                         R349
                         <span class="flex flex-col">
@@ -77,60 +106,60 @@
                             </span>
                         </span>
                     </span>
-                        </div>
-                        <div class="flex flex-col gap-y-2">
-                            <div class="rounded-full w-6 h-6 border-4 border-white group-hover:border-yellow-400 flex items-center justify-center bullet-container">
-                                <div class="rounded-full w-3 h-3 group-hover:bg-yellow-500 bullet-container-small"></div>
+                            </div>
+                            <div class="flex flex-col gap-y-2">
+                                <div class="rounded-full w-6 h-6 border-4 border-white group-hover:border-yellow-400 flex items-center justify-center bullet-container">
+                                    <div class="rounded-full w-3 h-3 group-hover:bg-yellow-500 bullet-container-small"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="flex flex-col bg-gray-300 py-3 px-4 text-xs rounded-b-md gap-y-2 hidden option-details">
-                    <h3 class="uppercase font-semibold">
-                        plan details
-                    </h3>
-                    <p>
-                        uscipit. Donec tincidunt a nibh quis volutpat. Nam eget nisi risus. Suspendisse non
-                        fermentum
-                        leo. Integer vitae mi eu ante pellentesque iaculis gravida ut elit. Aliquam erat volutpat.
-                        Cras
-                        pulvinar euismod rhoncus. Ut rhoncus, lacus id efficitur tincidunt, purus tortor volutpat
-                        libero, eu e
-                    </p>
-                </div>
-            </li>
-            <li class="flex option-item cursor-pointer w-full group flex-col">
-                <div class="flex flex-col text-gray-800 hover:text-white rounded-md hover:bg-gray-800 py-3 px-4 grow option-container">
-                    <span class="text-sm">MEGA GIGS XS</span>
-                    <div class="flex grow justify-between gap-x-4">
-                        <div class="flex flex-col gap-y-2 w-40">
-                            <span class="font-bold text-2xl">2 GB</span>
-                            <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
-                                <li>
+                    <div class="flex flex-col bg-gray-300 py-3 px-4 text-xs rounded-b-md gap-y-2 hidden option-details">
+                        <h3 class="uppercase font-semibold">
+                            plan details
+                        </h3>
+                        <p>
+                            uscipit. Donec tincidunt a nibh quis volutpat. Nam eget nisi risus. Suspendisse non
+                            fermentum
+                            leo. Integer vitae mi eu ante pellentesque iaculis gravida ut elit. Aliquam erat volutpat.
+                            Cras
+                            pulvinar euismod rhoncus. Ut rhoncus, lacus id efficitur tincidunt, purus tortor volutpat
+                            libero, eu e
+                        </p>
+                    </div>
+                </li>
+                <li class="flex option-item cursor-pointer w-full group flex-col">
+                    <div class="flex flex-col text-gray-800 hover:text-white rounded-md hover:bg-gray-800 py-3 px-4 grow option-container">
+                        <span class="text-sm">MEGA GIGS XS</span>
+                        <div class="flex grow justify-between gap-x-4">
+                            <div class="flex flex-col gap-y-2 w-40">
+                                <span class="font-bold text-2xl">2 GB</span>
+                                <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
+                                    <li>
                                     <span class="font-semibold">1 <span
                                             class="font-normal">GB Anytime Data</span></span>
-                                </li>
-                                <li>
+                                    </li>
+                                    <li>
                                     <span class="font-semibold">500 <span
                                             class="font-normal">MB Social Data</span></span>
-                                </li>
-                                <li>
+                                    </li>
+                                    <li>
                                     <span class="font-semibold">500 <span
                                             class="font-normal">MB Video Streaming Data</span></span>
-                                </li>
-                            </ul>
-                        </div>
+                                    </li>
+                                </ul>
+                            </div>
 
-                        <div class="flex flex-col gap-y-2">
-                            <span class="font-bold text-2xl">2 MIN</span>
-                            <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
-                                <li>
-                                    <span class="font-semibold">25 <span class="font-normal">All-Net</span></span>
-                                </li>
-                            </ul>
-                        </div>
+                            <div class="flex flex-col gap-y-2">
+                                <span class="font-bold text-2xl">2 MIN</span>
+                                <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
+                                    <li>
+                                        <span class="font-semibold">25 <span class="font-normal">All-Net</span></span>
+                                    </li>
+                                </ul>
+                            </div>
 
-                        <div class="flex flex-col gap-y-2 ">
+                            <div class="flex flex-col gap-y-2 ">
                     <span class="font-bold text-3xl flex gap-x-1">
                         R349
                         <span class="flex flex-col">
@@ -143,70 +172,166 @@
                             </span>
                         </span>
                     </span>
-                        </div>
-                        <div class="flex flex-col gap-y-2">
-                            <div class="rounded-full w-6 h-6 border-4 border-white group-hover:border-yellow-400 flex items-center justify-center bullet-container">
-                                <div class="rounded-full w-3 h-3 group-hover:bg-yellow-500 bullet-container-small"></div>
+                            </div>
+                            <div class="flex flex-col gap-y-2">
+                                <div class="rounded-full w-6 h-6 border-4 border-white group-hover:border-yellow-400 flex items-center justify-center bullet-container">
+                                    <div class="rounded-full w-3 h-3 group-hover:bg-yellow-500 bullet-container-small"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="flex flex-col bg-gray-300 py-3 px-4 text-xs rounded-b-md gap-y-2 hidden option-details">
-                    <h3 class="uppercase font-semibold">
-                        plan details
-                    </h3>
-                    <p>
-                        uscipit. Donec tincidunt a nibh quis volutpat. Nam eget nisi risus. Suspendisse non
-                        fermentum
-                        leo. Integer vitae mi eu ante pellentesque iaculis gravida ut elit. Aliquam erat volutpat.
-                        Cras
-                        pulvinar euismod rhoncus. Ut rhoncus, lacus id efficitur tincidunt, purus tortor volutpat
-                        libero, eu e
-                    </p>
-                </div>
-            </li>
-        </ul>
+                    <div class="flex flex-col bg-gray-300 py-3 px-4 text-xs rounded-b-md gap-y-2 hidden option-details">
+                        <h3 class="uppercase font-semibold">
+                            plan details
+                        </h3>
+                        <p>
+                            uscipit. Donec tincidunt a nibh quis volutpat. Nam eget nisi risus. Suspendisse non
+                            fermentum
+                            leo. Integer vitae mi eu ante pellentesque iaculis gravida ut elit. Aliquam erat volutpat.
+                            Cras
+                            pulvinar euismod rhoncus. Ut rhoncus, lacus id efficitur tincidunt, purus tortor volutpat
+                            libero, eu e
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="months-content2" class="months-tab-content hidden flex flex-col w-full rounded-md bg-gray-200 p-2">
+            <div class="flex p-4">
+                <h2 class="text-gray-800 font-light text-xl">Which option works for you?</h2>
+                <button class="text-gray-800 font-normal flex gap-x-4 items-center ml-auto">
+                    <span class="text-sm font-semibold">Sort By: Low to High</span>
+                </button>
+            </div>
+            <ul class="flex flex-col gap-y-2 divide-y divide-gray-300">
+                <li class="flex option-item cursor-pointer w-full group flex-col">
+                    <div class="flex flex-col text-gray-800 hover:text-white rounded-md hover:bg-gray-800 py-3 px-4 grow option-container">
+                        <span class="text-sm">MEGA GIGS XS</span>
+                        <div class="flex grow justify-between gap-x-4">
+                            <div class="flex flex-col gap-y-2 w-40">
+                                <span class="font-bold text-2xl">2 GB</span>
+                                <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
+                                    <li>
+                                    <span class="font-semibold">1 <span
+                                            class="font-normal">GB Anytime Data</span></span>
+                                    </li>
+                                    <li>
+                                    <span class="font-semibold">500 <span
+                                            class="font-normal">MB Social Data</span></span>
+                                    </li>
+                                    <li>
+                                    <span class="font-semibold">500 <span
+                                            class="font-normal">MB Video Streaming Data</span></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col gap-y-2">
+                                <span class="font-bold text-2xl">2 MIN</span>
+                                <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
+                                    <li>
+                                        <span class="font-semibold">25 <span class="font-normal">All-Net</span></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col gap-y-2 ">
+                    <span class="font-bold text-3xl flex gap-x-1">
+                        R349
+                        <span class="flex flex-col">
+                             <span class="flex flex-col text-xs font-semibold">
+                                 <span>PM</span>
+                                 <span>X24</span>
+                            </span>
+                            <span class="text-xs font-normal ml-4">
+                                Package Price
+                            </span>
+                        </span>
+                    </span>
+                            </div>
+                            <div class="flex flex-col gap-y-2">
+                                <div class="rounded-full w-6 h-6 border-4 border-white group-hover:border-yellow-400 flex items-center justify-center bullet-container">
+                                    <div class="rounded-full w-3 h-3 group-hover:bg-yellow-500 bullet-container-small"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-gray-300 py-3 px-4 text-xs rounded-b-md gap-y-2 hidden option-details">
+                        <h3 class="uppercase font-semibold">
+                            plan details
+                        </h3>
+                        <p>
+                            uscipit. Donec tincidunt a nibh quis volutpat. Nam eget nisi risus. Suspendisse non
+                            fermentum
+                            leo. Integer vitae mi eu ante pellentesque iaculis gravida ut elit. Aliquam erat volutpat.
+                            Cras
+                            pulvinar euismod rhoncus. Ut rhoncus, lacus id efficitur tincidunt, purus tortor volutpat
+                            libero, eu e
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div id="content2" class="tab-content hidden flex flex-col w-full rounded-md bg-gray-200 p-2">
-        <div class="flex p-4">
-            <h2 class="text-gray-800 font-light text-xl">Which option works for you?</h2>
-            <button class="text-gray-800 font-normal flex gap-x-4 items-center ml-auto">
-                <span class="text-sm font-semibold">Sort By: Low to High</span>
-            </button>
+    <div id="data-plan-type-content2"
+         class="data-plan-type-tab-content hidden flex flex-col w-full rounded-md bg-gray-200 p-2">
+
+        <!--MONTHS YOU WANT THE PLAN FOR-->
+        <div class="flex flex-col rounded-md bg-gray-200 p-4 gap-y-4 w-full">
+            <h2 class="text-gray-800 font-light text-xl">Pick how many months you want the plan for.</h2>
+            <ul class="flex gap-x-4">
+                <li>
+                    <a id="months-tab3" href="#"
+                       class="months-plan--tab bg-gray-800 hover:bg-gray-800 hover:text-white flex items-center justify-center py-2 px-4 text-white font-light rounded-md p-2 w-64 h-10	border border-gray-400 text-sm"
+                       onclick="openTab('months-tab3','months-content3', 'months-tab-content', 'months-plan--tab')">24</a>
+                </li>
+                <li>
+                    <a id="months-tab4" href="#"
+                       class="months-plan--tab bg-transparent hover:bg-gray-800 hover:text-white flex items-center justify-center py-2 px-4 text-gray-800 font-light rounded-md p-2 w-64 h-10 border border-gray-400"
+                       onclick="openTab('months-tab4','months-content4', 'months-tab-content','months-plan--tab')">36</a>
+                </li>
+            </ul>
         </div>
-        <ul class="flex flex-col gap-y-2 divide-y divide-gray-300">
-            <li class="flex option-item cursor-pointer w-full group flex-col">
-                <div class="flex flex-col text-gray-800 hover:text-white rounded-md hover:bg-gray-800 py-3 px-4 grow option-container">
-                    <span class="text-sm">MEGA GIGS XS</span>
-                    <div class="flex grow justify-between gap-x-4">
-                        <div class="flex flex-col gap-y-2 w-40">
-                            <span class="font-bold text-2xl">2 GB</span>
-                            <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
-                                <li>
+        <div id="months-content3" class="months-tab-content flex flex-col w-full rounded-md bg-gray-200 p-2">
+            <div class="flex p-4">
+                <h2 class="text-gray-800 font-light text-xl">Which option works for you?</h2>
+                <button class="text-gray-800 font-normal flex gap-x-4 items-center ml-auto">
+                    <span class="text-sm font-semibold">Sort By: Low to High</span>
+                </button>
+            </div>
+            <ul class="flex flex-col gap-y-2 divide-y divide-gray-300">
+                <li class="flex option-item cursor-pointer w-full group flex-col">
+                    <div class="flex flex-col text-gray-800 hover:text-white rounded-md hover:bg-gray-800 py-3 px-4 grow option-container">
+                        <span class="text-sm">MEGA GIGS XS</span>
+                        <div class="flex grow justify-between gap-x-4">
+                            <div class="flex flex-col gap-y-2 w-40">
+                                <span class="font-bold text-2xl">2 GB</span>
+                                <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
+                                    <li>
                                     <span class="font-semibold">1 <span
                                             class="font-normal">GB Anytime Data</span></span>
-                                </li>
-                                <li>
+                                    </li>
+                                    <li>
                                     <span class="font-semibold">500 <span
                                             class="font-normal">MB Social Data</span></span>
-                                </li>
-                                <li>
+                                    </li>
+                                    <li>
                                     <span class="font-semibold">500 <span
                                             class="font-normal">MB Video Streaming Data</span></span>
-                                </li>
-                            </ul>
-                        </div>
+                                    </li>
+                                </ul>
+                            </div>
 
-                        <div class="flex flex-col gap-y-2">
-                            <span class="font-bold text-2xl">2 MIN</span>
-                            <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
-                                <li>
-                                    <span class="font-semibold">25 <span class="font-normal">All-Net</span></span>
-                                </li>
-                            </ul>
-                        </div>
+                            <div class="flex flex-col gap-y-2">
+                                <span class="font-bold text-2xl">2 MIN</span>
+                                <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
+                                    <li>
+                                        <span class="font-semibold">25 <span class="font-normal">All-Net</span></span>
+                                    </li>
+                                </ul>
+                            </div>
 
-                        <div class="flex flex-col gap-y-2 ">
+                            <div class="flex flex-col gap-y-2 ">
                     <span class="font-bold text-3xl flex gap-x-1">
                         R349
                         <span class="flex flex-col">
@@ -219,43 +344,189 @@
                             </span>
                         </span>
                     </span>
-                        </div>
-                        <div class="flex flex-col gap-y-2">
-                            <div class="rounded-full w-6 h-6 border-4 border-white group-hover:border-yellow-400 flex items-center justify-center bullet-container">
-                                <div class="rounded-full w-3 h-3 group-hover:bg-yellow-500 bullet-container-small"></div>
+                            </div>
+                            <div class="flex flex-col gap-y-2">
+                                <div class="rounded-full w-6 h-6 border-4 border-white group-hover:border-yellow-400 flex items-center justify-center bullet-container">
+                                    <div class="rounded-full w-3 h-3 group-hover:bg-yellow-500 bullet-container-small"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="flex flex-col bg-gray-300 py-3 px-4 text-xs rounded-b-md gap-y-2 hidden option-details">
-                    <h3 class="uppercase font-semibold">
-                        plan details
-                    </h3>
-                    <p>
-                        uscipit. Donec tincidunt a nibh quis volutpat. Nam eget nisi risus. Suspendisse non
-                        fermentum
-                        leo. Integer vitae mi eu ante pellentesque iaculis gravida ut elit. Aliquam erat volutpat.
-                        Cras
-                        pulvinar euismod rhoncus. Ut rhoncus, lacus id efficitur tincidunt, purus tortor volutpat
-                        libero, eu e
-                    </p>
-                </div>
-            </li>
-        </ul>
+                    <div class="flex flex-col bg-gray-300 py-3 px-4 text-xs rounded-b-md gap-y-2 hidden option-details">
+                        <h3 class="uppercase font-semibold">
+                            plan details
+                        </h3>
+                        <p>
+                            uscipit. Donec tincidunt a nibh quis volutpat. Nam eget nisi risus. Suspendisse non
+                            fermentum
+                            leo. Integer vitae mi eu ante pellentesque iaculis gravida ut elit. Aliquam erat volutpat.
+                            Cras
+                            pulvinar euismod rhoncus. Ut rhoncus, lacus id efficitur tincidunt, purus tortor volutpat
+                            libero, eu e
+                        </p>
+                    </div>
+                </li>
+                <li class="flex option-item cursor-pointer w-full group flex-col">
+                    <div class="flex flex-col text-gray-800 hover:text-white rounded-md hover:bg-gray-800 py-3 px-4 grow option-container">
+                        <span class="text-sm">MEGA GIGS XS</span>
+                        <div class="flex grow justify-between gap-x-4">
+                            <div class="flex flex-col gap-y-2 w-40">
+                                <span class="font-bold text-2xl">2 GB</span>
+                                <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
+                                    <li>
+                                    <span class="font-semibold">1 <span
+                                            class="font-normal">GB Anytime Data</span></span>
+                                    </li>
+                                    <li>
+                                    <span class="font-semibold">500 <span
+                                            class="font-normal">MB Social Data</span></span>
+                                    </li>
+                                    <li>
+                                    <span class="font-semibold">500 <span
+                                            class="font-normal">MB Video Streaming Data</span></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col gap-y-2">
+                                <span class="font-bold text-2xl">2 MIN</span>
+                                <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
+                                    <li>
+                                        <span class="font-semibold">25 <span class="font-normal">All-Net</span></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col gap-y-2 ">
+                    <span class="font-bold text-3xl flex gap-x-1">
+                        R349
+                        <span class="flex flex-col">
+                             <span class="flex flex-col text-xs font-semibold">
+                                 <span>PM</span>
+                                 <span>X24</span>
+                            </span>
+                            <span class="text-xs font-normal ml-4">
+                                Package Price
+                            </span>
+                        </span>
+                    </span>
+                            </div>
+                            <div class="flex flex-col gap-y-2">
+                                <div class="rounded-full w-6 h-6 border-4 border-white group-hover:border-yellow-400 flex items-center justify-center bullet-container">
+                                    <div class="rounded-full w-3 h-3 group-hover:bg-yellow-500 bullet-container-small"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-gray-300 py-3 px-4 text-xs rounded-b-md gap-y-2 hidden option-details">
+                        <h3 class="uppercase font-semibold">
+                            plan details
+                        </h3>
+                        <p>
+                            uscipit. Donec tincidunt a nibh quis volutpat. Nam eget nisi risus. Suspendisse non
+                            fermentum
+                            leo. Integer vitae mi eu ante pellentesque iaculis gravida ut elit. Aliquam erat volutpat.
+                            Cras
+                            pulvinar euismod rhoncus. Ut rhoncus, lacus id efficitur tincidunt, purus tortor volutpat
+                            libero, eu e
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="months-content4" class="months-tab-content hidden flex flex-col w-full rounded-md bg-gray-200 p-2">
+            <div class="flex p-4">
+                <h2 class="text-gray-800 font-light text-xl">Which option works for you?</h2>
+                <button class="text-gray-800 font-normal flex gap-x-4 items-center ml-auto">
+                    <span class="text-sm font-semibold">Sort By: Low to High</span>
+                </button>
+            </div>
+            <ul class="flex flex-col gap-y-2 divide-y divide-gray-300">
+                <li class="flex option-item cursor-pointer w-full group flex-col">
+                    <div class="flex flex-col text-gray-800 hover:text-white rounded-md hover:bg-gray-800 py-3 px-4 grow option-container">
+                        <span class="text-sm">MEGA GIGS XS</span>
+                        <div class="flex grow justify-between gap-x-4">
+                            <div class="flex flex-col gap-y-2 w-40">
+                                <span class="font-bold text-2xl">2 GB</span>
+                                <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
+                                    <li>
+                                    <span class="font-semibold">1 <span
+                                            class="font-normal">GB Anytime Data</span></span>
+                                    </li>
+                                    <li>
+                                    <span class="font-semibold">500 <span
+                                            class="font-normal">MB Social Data</span></span>
+                                    </li>
+                                    <li>
+                                    <span class="font-semibold">500 <span
+                                            class="font-normal">MB Video Streaming Data</span></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col gap-y-2">
+                                <span class="font-bold text-2xl">2 MIN</span>
+                                <ul class="flex flex-col gap-y-2 text-white text-sm hidden">
+                                    <li>
+                                        <span class="font-semibold">25 <span class="font-normal">All-Net</span></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col gap-y-2 ">
+                    <span class="font-bold text-3xl flex gap-x-1">
+                        R349
+                        <span class="flex flex-col">
+                             <span class="flex flex-col text-xs font-semibold">
+                                 <span>PM</span>
+                                 <span>X24</span>
+                            </span>
+                            <span class="text-xs font-normal ml-4">
+                                Package Price
+                            </span>
+                        </span>
+                    </span>
+                            </div>
+                            <div class="flex flex-col gap-y-2">
+                                <div class="rounded-full w-6 h-6 border-4 border-white group-hover:border-yellow-400 flex items-center justify-center bullet-container">
+                                    <div class="rounded-full w-3 h-3 group-hover:bg-yellow-500 bullet-container-small"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-gray-300 py-3 px-4 text-xs rounded-b-md gap-y-2 hidden option-details">
+                        <h3 class="uppercase font-semibold">
+                            plan details
+                        </h3>
+                        <p>
+                            uscipit. Donec tincidunt a nibh quis volutpat. Nam eget nisi risus. Suspendisse non
+                            fermentum
+                            leo. Integer vitae mi eu ante pellentesque iaculis gravida ut elit. Aliquam erat volutpat.
+                            Cras
+                            pulvinar euismod rhoncus. Ut rhoncus, lacus id efficitur tincidunt, purus tortor volutpat
+                            libero, eu e
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="data-plan-type-content3"
+         class="data-plan-type-tab-content hidden flex flex-col w-full rounded-md bg-gray-200 p-2">
     </div>
 </div>
 
 
 <script>
-    function openTab(tabId, tabName) {
+    function openTab(tabId, tabName, tabContentClassName, tabAnchorClassName) {
         // Get all elements with class="tab-content" and hide them
-        let tabContents = document.getElementsByClassName("tab-content");
+        let tabContents = document.getElementsByClassName(tabContentClassName);
         for (let i = 0; i < tabContents.length; i++) {
             tabContents[i].style.display = "none";
         }
 
         // Get all elements with class="text-white" and remove the class
-        let tabLinks = document.getElementsByTagName("a");
+        let tabLinks = document.getElementsByClassName(tabAnchorClassName);
         for (let i = 0; i < tabLinks.length; i++) {
             tabLinks[i].classList.remove("text-white");
             tabLinks[i].classList.add("text-gray-800");
