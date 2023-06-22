@@ -553,11 +553,29 @@
             --tw-bg-opacity: 1;
             background-color: rgb(234 179 8 / var(--tw-bg-opacity))
         }
+
+        .magic-tabs .colour-button {
+            display: inline-block;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            transition: border 0.3s ease;
+        }
     </style>
 </head>
 <body>
 <div class="magic-tabs">
     <div class="mx-auto p-4 gap-y-4 flex-col flex w-[628px]">
+        <!--    PICK COLOUR-->
+        <div class="flex flex-col rounded-md bg-gray-200 p-4 gap-y-4 w-full">
+            <h2 class="text-gray-800 font-light text-xl">Pick A Colour: </h2>
+            <div class="flex gap-x-4" id="buttonsContainer">
+            </div>
+        </div>
+
         <!--    DATA PLAN TYPE-->
         <div class="flex flex-col rounded-md bg-gray-200 p-4 gap-y-4 w-full">
             <h2 class="text-gray-800 font-light text-xl">Pick The Data Plan Type</h2>
@@ -582,6 +600,8 @@
                 </li>
             </ul>
         </div>
+
+        <!--    PICK MONTHS-->
         <div id="data-plan-type-content1"
              class="data-plan-type-tab-content flex flex-col w-full rounded-md bg-gray-200 p-2">
 
@@ -1172,6 +1192,31 @@
             element.classList.remove("rounded-b-md");
         }
     }
+
+    (function colourBtnsCreator() {
+        const colors = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#00FFFF", "#FF00FF"];
+        const container = document.getElementById("buttonsContainer");
+
+        for (let i = 0; i < colors.length; i++) {
+            let button = document.createElement("button");
+            button.classList.add("colour-button");
+            button.style.backgroundColor = colors[i];
+            button.addEventListener("click", function () {
+                clearBorders();
+                this.style.border = "2px solid white";
+                alert("Button clicked: " + this.style.backgroundColor);
+                // make the api call here
+            });
+            container.appendChild(button);
+        }
+
+        function clearBorders() {
+            let buttons = document.getElementsByClassName("colour-button");
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].style.border = "none";
+            }
+        }
+    }())
 </script>
 </body>
 </html>
